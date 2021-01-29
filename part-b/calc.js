@@ -15,15 +15,15 @@
     switch (word) {
       case "add":
         let sum = parseFloat(preVal) + parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = sum.toString();
+        document.getElementById("calc-screen-text").innerHTML = (sum > 100000000000000000n) ? 0 : sum.toString();
         break;
       case "sub":
         let dif = parseFloat(preVal) - parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = dif.toString();
+        document.getElementById("calc-screen-text").innerHTML = (dif < -100000000000000000n) ? 0 :   dif.toString();
         break;
       case "mult":
         let prod = parseFloat(preVal) * parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = prod.toString();
+        document.getElementById("calc-screen-text").innerHTML = (prod > 100000000000000000n) ? 0 :  prod.toString();
         break;
       case "div":
         let quot = parseFloat(preVal) / parseFloat(curVal);
@@ -45,7 +45,7 @@
         if (func) {
           handleOp();
         }
-        word = "add";
+        word ? undefined : word = "add";
         func = true;
         preVal = document.getElementById("calc-screen-text").innerHTML;
         break;
@@ -91,7 +91,7 @@
           if (curText.length >= 18) {
             break;
           }
-          if (curText === "0" || func) {
+          if (curText === "0" || preVal === curText) {
             document.getElementById("calc-screen-text").innerHTML = val;
           } else {
             document.getElementById("calc-screen-text").innerHTML += val;
