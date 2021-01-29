@@ -7,6 +7,9 @@
   let func = false;
   let preVal;
 
+  // Handles the math behind the calculator by grabbing the function, 
+  // the previous value, the current value input, and then replaces 
+  // the screen with the proper result.
   function handleOp() {
     let curVal = document.getElementById("calc-screen-text").innerHTML;
     switch (word) {
@@ -33,6 +36,8 @@
     }
   }
 
+  // Click handler for the calculator.
+  // Makes the calculator perform the correct operation when clicked.
   function handleClick(e) {
     let val = e.target.innerHTML;
     switch (val) {
@@ -97,6 +102,9 @@
     }
   }
 
+  // Loops through the th tags on load and adds a click event listener that
+  // is set up to pass the event to the function so that we don't need any identifiers
+  // because the item being clicked passes itself.
   function init() {
     let arr = document.getElementsByTagName("th");
     for (let i = 0; i < arr.length; i++) {
