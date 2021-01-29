@@ -1,0 +1,48 @@
+#calculator {
+  border: 2px solid black;
+  width: 450px;
+  border-radius: 20px;
+  background-color: navy;
+}
+
+#calculator-screen {
+  max-width: 400px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+#calc-screen-text {
+  font-weight: 700;
+  font-size: 30pt;
+  text-align: right;
+}
+
+table {
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+tr {
+  border-bottom: 1px solid lightgrey;
+}
+
+th {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 25%;
+  font-size: 20pt;
+  background-color: white;
+}
+
+th:hover {
+  box-shadow: 1px 1px 1px grey inset;
+  cursor: pointer;
+}
+
+th:active {
+  box-shadow: 2px 1px 0px grey inset;
+}
