@@ -1,0 +1,14 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /home/danny/www/hw02.danny-mcgrath.com/animal;
+
+	index animal.html;
+
+	server_name danny-mcgrath.com animal.danny-mcgrath.com;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
