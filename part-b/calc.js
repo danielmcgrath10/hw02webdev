@@ -7,23 +7,26 @@
   let func = false;
   let preVal;
 
-  // Handles the math behind the calculator by grabbing the function, 
-  // the previous value, the current value input, and then replaces 
+  // Handles the math behind the calculator by grabbing the function,
+  // the previous value, the current value input, and then replaces
   // the screen with the proper result.
   function handleOp() {
     let curVal = document.getElementById("calc-screen-text").innerHTML;
     switch (word) {
       case "add":
         let sum = parseFloat(preVal) + parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = (sum > 100000000000000000n) ? 0 : sum.toString();
+        document.getElementById("calc-screen-text").innerHTML =
+          sum > 100000000000000000n ? 0 : sum.toString();
         break;
       case "sub":
         let dif = parseFloat(preVal) - parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = (dif < -100000000000000000n) ? 0 :   dif.toString();
+        document.getElementById("calc-screen-text").innerHTML =
+          dif < -100000000000000000n ? 0 : dif.toString();
         break;
       case "mult":
         let prod = parseFloat(preVal) * parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = (prod > 100000000000000000n) ? 0 :  prod.toString();
+        document.getElementById("calc-screen-text").innerHTML =
+          prod > 100000000000000000n ? 0 : prod.toString();
         break;
       case "div":
         let quot = parseFloat(preVal) / parseFloat(curVal);
@@ -45,7 +48,7 @@
         if (func) {
           handleOp();
         }
-        word ? undefined : word = "add";
+        word ? undefined : (word = "add");
         func = true;
         preVal = document.getElementById("calc-screen-text").innerHTML;
         break;
