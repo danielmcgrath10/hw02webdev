@@ -12,25 +12,26 @@
   // the screen with the proper result.
   function handleOp() {
     let curVal = document.getElementById("calc-screen-text").innerHTML;
+    let elem = document.getElementById("calc-screen-text");
     switch (word) {
       case "add":
         let sum = parseFloat(preVal) + parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML =
+        elem.innerHTML =
           sum > 100000000000000000n ? 0 : sum.toString();
         break;
       case "sub":
         let dif = parseFloat(preVal) - parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML =
+        elem.innerHTML =
           dif < -100000000000000000n ? 0 : dif.toString();
         break;
       case "mult":
         let prod = parseFloat(preVal) * parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML =
+        elem.innerHTML =
           prod > 100000000000000000n ? 0 : prod.toString();
         break;
       case "div":
         let quot = parseFloat(preVal) / parseFloat(curVal);
-        document.getElementById("calc-screen-text").innerHTML = quot.toString();
+        elem.innerHTML = quot.toString();
         break;
       default:
         console.log(word, preVal, curVal);
@@ -43,6 +44,7 @@
   // Makes the calculator perform the correct operation when clicked.
   function handleClick(e) {
     let val = e.target.innerHTML;
+    let screen = document.getElementById("calc-screen-text");
     switch (val) {
       case "+=":
         if (func) {
@@ -50,7 +52,7 @@
         }
         word ? undefined : (word = "add");
         func = true;
-        preVal = document.getElementById("calc-screen-text").innerHTML;
+        preVal = screen.innerHTML;
         break;
       case "-":
         if (func && !word) {
@@ -58,7 +60,7 @@
         }
         word = "sub";
         func = true;
-        preVal = document.getElementById("calc-screen-text").innerHTML;
+        preVal = screen.innerHTML;
         break;
       case "x":
         if (func && !word) {
@@ -66,7 +68,7 @@
         }
         word = "mult";
         func = true;
-        preVal = document.getElementById("calc-screen-text").innerHTML;
+        preVal = screen.innerHTML;
         break;
       case "/":
         if (func && !word) {
@@ -74,30 +76,30 @@
         }
         word = "div";
         func = true;
-        preVal = document.getElementById("calc-screen-text").innerHTML;
+        preVal = screen.innerHTML;
         break;
       case ".":
         if (
-          !document.getElementById("calc-screen-text").innerHTML.includes(".")
+          !screen.innerHTML.includes(".")
         ) {
-          document.getElementById("calc-screen-text").innerHTML += ".";
+          screen.innerHTML += ".";
         }
         break;
       case "C":
-        document.getElementById("calc-screen-text").innerHTML = "0";
+        screen.innerHTML = "0";
         word = undefined;
         func = false;
         break;
       default:
         try {
-          let curText = document.getElementById("calc-screen-text").innerHTML;
+          let curText = screen.innerHTML;
           if (curText.length >= 18) {
             break;
           }
           if (curText === "0" || preVal === curText) {
-            document.getElementById("calc-screen-text").innerHTML = val;
+            screen.innerHTML = val;
           } else {
-            document.getElementById("calc-screen-text").innerHTML += val;
+            screen.innerHTML += val;
           }
         } catch (err) {
           console.log(err);

@@ -3,32 +3,41 @@ Please fill in answers to the questions below:
 
 1. What's your name?
 
+Daniel McGrath
 
 2. What hostname did you deploy to?
 
+www.danny-mcgrath.com
 
 3. What's the link to your repository on github with your code?
 
+https://github.com/danielmcgrath10/hw02webdev
 
 4. How many HTML / CSS tutorial exercises did you do?
 
+I did ~7 of these.
 
 5. How comfortable do you feel with HTML and CSS now?
 
+Very comfortable
 
 6. How many JS tutorial exercises did you do?
 
+I did ~10, I have done most of my work with React, so I mainly did the ones to refresh myself on higher level concepts
 
 7. How comfortable do you feel with JS now?
 
+Very comfortable
 
 8. Do all of your HTML pages pass the W3C HTML validator?
 (https://validator.w3.org/)
 
 
+
 9. Which parts of this assignment did you have trouble with, if any?
 
-
+The part that I had the most trouble with was trying to do path routing on the nginx config file instead of the subdomain routing. 
+I ended up not being able to accomplish my goal which was a little disheartening, but the websites work with the subdomain routing.
 
 
 
