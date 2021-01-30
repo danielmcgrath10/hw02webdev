@@ -22,7 +22,7 @@ Very comfortable
 
 6. How many JS tutorial exercises did you do?
 
-I did ~10, I have done most of my work with React, so I mainly did 
+I did ~5, I have done most of my work with React and JS, so I mainly did 
 the ones to refresh myself on higher level concepts
 
 7. How comfortable do you feel with JS now?
