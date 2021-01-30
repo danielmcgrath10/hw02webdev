@@ -7,7 +7,7 @@ Daniel McGrath
 
 2. What hostname did you deploy to?
 
-www.danny-mcgrath.com
+hw02.danny-mcgrath.com
 
 3. What's the link to your repository on github with your code?
 
@@ -32,7 +32,7 @@ Very comfortable
 8. Do all of your HTML pages pass the W3C HTML validator?
 (https://validator.w3.org/)
 
-
+No they don't, they keep getting stuck on the utf-8 encoding meta line even though my index files for this assignment do have them in their "head" section.
 
 9. Which parts of this assignment did you have trouble with, if any?
 
