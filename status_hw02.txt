@@ -1,6 +1,5 @@
 Please fill in answers to the questions below:
 
-
 1. What's your name?
 
 Daniel McGrath
@@ -23,7 +22,8 @@ Very comfortable
 
 6. How many JS tutorial exercises did you do?
 
-I did ~10, I have done most of my work with React, so I mainly did the ones to refresh myself on higher level concepts
+I did ~10, I have done most of my work with React, so I mainly did 
+the ones to refresh myself on higher level concepts
 
 7. How comfortable do you feel with JS now?
 
@@ -32,12 +32,18 @@ Very comfortable
 8. Do all of your HTML pages pass the W3C HTML validator?
 (https://validator.w3.org/)
 
-No they don't, they keep getting stuck on the utf-8 encoding meta line even though my index files for this assignment do have them in their "head" section.
+No they don't, they keep getting stuck on the utf-8 encoding meta 
+line even though my index files for this assignment do have them in 
+their "head" section.
+They also keep getting stuck on the image tag without any sort of 
+feedback.
 
 9. Which parts of this assignment did you have trouble with, if any?
 
-The part that I had the most trouble with was trying to do path routing on the nginx config file instead of the subdomain routing. 
-I ended up not being able to accomplish my goal which was a little disheartening, but the websites work with the subdomain routing.
+The part that I had the most trouble with was trying to do path 
+routing on the nginx config file instead of the subdomain routing. 
+I ended up not being able to accomplish my goal which was a little 
+disheartening, but the websites work with the subdomain routing.
 
 
 
